@@ -1,6 +1,6 @@
 import psutil
 import sched, time
-print ("hello pod")
+print ("hello pod info")
 s=sched.scheduler(time.time,time.sleep)
 def do_something(sc):
    cpu=psutil.cpu_percent(interval=10)
