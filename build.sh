@@ -2,6 +2,6 @@
 
 echo " build image from Dockerfile"
 
-docker-compose -f dokcer-compose.yaml build 
+docker-compose -f docker-compose.yaml build 
 
 
