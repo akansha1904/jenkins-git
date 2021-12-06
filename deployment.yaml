@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hello-pod
+  name: hello-pod-usage
   labels:
-    app: hello-pod
+    app: hello-pod-usage
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: hello-pod
+      app: hello-pod-usage
   template:
     metadata:
       labels:
-        app: hello-pod
+        app: hello-pod-usage
     spec:
       containers:
-      - image: gcr.io/tomcat-70998/jenkins-assignment:v1
+      - image: gcr.io/tomcat-70998/jenkins-assignment:v2
         imagePullPolicy: Always
-        name: hello-pod
+        name: hello-pod-usage
         ports:
         - containerPort: 8080
 
