@@ -16,17 +16,19 @@ pipeline {
         }
         stage("Push") {
            steps {
-            sh ' ./gcr-push.sh '
+             sh ' ./gcr-push.sh '
 
            }
         }
         stage("Deploy") {
          steps {
-            sh ' ./deploy.sh '
+             withEnv(['GCLOUD_PATH=/var/jenkins_home/google-cloud-sdk/bin'])
+             sh ' ./deploy.sh '
            }
         }
         stage("List") {
          steps {
+            withEnv(['GCLOUD_PATH=/var/jenkins_home/google-cloud-sdk/bin'])
             sh ' ./kube-pods.sh '
            }
         }
