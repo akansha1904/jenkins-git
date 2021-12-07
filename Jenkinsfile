@@ -1,6 +1,7 @@
 pipeline {
     agent any
     environment {
+        GCLOUD_PATH='/home/aka/google-cloud-sdk/bin'
         PROJECT_ID = 'tomcat-70998'
         CLUSTER_NAME = 'tomcat-service'
 	LOCATION = 'us-central1-c'
@@ -22,13 +23,13 @@ pipeline {
         }
         stage("Deploy") {
          steps {
-             withEnv(['GCLOUD_PATH=/var/jenkins_home/google-cloud-sdk/bin'])
+         
              sh ' ./deploy.sh '
            }
         }
         stage("List") {
          steps {
-            withEnv(['GCLOUD_PATH=/var/jenkins_home/google-cloud-sdk/bin'])
+          
             sh ' ./kube-pods.sh '
            }
         }
