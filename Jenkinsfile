@@ -4,7 +4,7 @@ pipeline {
         PROJECT_ID = 'tomcat-70998'
         CLUSTER_NAME = 'tomcat-service'
 	LOCATION = 'us-central1-c'
-	CREDENTIALS_ID = 'tomcat' 
+	CREDENTIALS_ID = 'jenkins-git' 
     }
 
     stages {
