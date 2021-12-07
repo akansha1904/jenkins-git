@@ -16,7 +16,7 @@ echo "deploy stage";
              gcloud components install app-engine-python
              gcloud auth activate-service-account --key-file ${CREDENTIALS_ID}
 
-             gcloud config list;
+             gcloud config list
              
                         
 docker login -u _json_key -p "$(cat key.json)" https://gcr.io
