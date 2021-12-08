@@ -39,7 +39,7 @@ pipeline {
 					
 					 gcloud config set project ${PROJECT_ID};
 					 gcloud components install kubectl
-					 gcloud components install app-engine-python;
+					 
                                          
 					 gcloud auth activate-service-account --key-file ${CREDENTIALS_ID};
 					 
