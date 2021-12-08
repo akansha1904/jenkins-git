@@ -24,10 +24,10 @@ pipeline {
         }
         stage("Deploy") {
          steps {
-            {
-              
-				
-				sh """
+            
+             
+		sh """
+
 					#!/bin/bash 
 					echo "deploy stage";
 		curl -o /tmp/google-cloud-sdk.tar.gz https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-225.0.0-linux-x86_64.tar.gz;
@@ -49,7 +49,7 @@ pipeline {
 
                     			 echo "Deployed to GCP"
 				"""
-				}	
+					
            }
         }
         stage("List") {
