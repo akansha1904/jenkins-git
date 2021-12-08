@@ -41,7 +41,7 @@ pipeline {
 					 gcloud components install kubectl
 					 gcloud components install app-engine-python;
                                          
-					 gcloud auth activate-service-account --key-file ${CREDENTIAL_ID};
+					 gcloud auth activate-service-account --key-file ${CREDENTIALS_ID};
 					 
 					 gcloud config list;
 					 gcloud container clusters get-credentials tomcat-service --zone us-central1-c
