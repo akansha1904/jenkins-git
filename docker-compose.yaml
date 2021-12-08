@@ -1,7 +1,7 @@
 version: "3"  
 services:
   app:
-    image: jenkins-assignment:v2
+    image: tomcat-70998/jenkins-assignment:v3
     build: 
       context: .
       dockerfile: Dockerfile

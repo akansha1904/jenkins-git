@@ -17,7 +17,10 @@ pipeline {
         }
         stage("Push") {
            steps {
-             sh ' ./gcr-push.sh '
+             script {
+                    docker.withRegistry('https://gcr.io', 'jenkins-project') {
+                    DockerImage.push()
+                    }
 
            }
         }
